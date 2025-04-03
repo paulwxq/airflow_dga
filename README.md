@@ -13,19 +13,7 @@
 ## 项目结构
 
 ```
-neo4j_etl_scheduler/
-│
-├── src/
-│   ├── __init__.py          # 包初始化文件
-│   ├── dag_generator.py     # DAG生成器核心逻辑
-│   └── config.py            # 配置信息
-│
-├── dags/
-│   └── dag_generator_dag.py # Airflow DAG定义
-│
-├── requirements.txt         # 依赖包列表
-├── README.md                # 项目说明
-└── .gitignore               # Git忽略文件
+
 ```
 
 ## 脚本的调用关系
@@ -42,31 +30,7 @@ neo4j_etl_scheduler/
 
 ## 安装配置
 
-1. 克隆项目
 
-```bash
-git clone <仓库URL>
-cd neo4j_etl_scheduler
-```
-
-2. 安装依赖
-
-```bash
-pip install -r requirements.txt
-```
-
-3. 配置
-
-编辑 `src/config.py` 文件，设置Neo4j连接信息和其他配置参数。
-
-4. 部署到Airflow
-
-确保项目目录可被Airflow访问：
-
-```bash
-# 假设您的Airflow在Docker容器中运行
-docker cp neo4j_etl_scheduler <container_id>:/opt/airflow/
-```
 
 ## 使用方法
 
