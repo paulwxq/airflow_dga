@@ -6,7 +6,7 @@
 """
 
 # Neo4j 连接配置
-NEO4J_URI = "bolt://192.168.3.156:7687"
+NEO4J_URI = "bolt://192.168.1.8:7687"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "Passw0rd"  # 请修改为您的实际密码
 

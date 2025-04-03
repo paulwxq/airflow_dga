@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# 方法 1：自动生成Airflow DAG文件
 
 """
 DAG生成器的调度DAG：每天运行一次，生成动态ETL DAG

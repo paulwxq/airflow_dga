@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # 此文件放在与config.py同一目录下，不要放在dags目录下
-# 此方法用于手动触发指定表的工作流
+# 此方法作为手动触发指定表的工作流的工具
+# 方法2：手动触发指定表的工作流
 
 import os
 import sys

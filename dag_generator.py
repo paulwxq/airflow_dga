@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# 方法1：自动生成Airflow DAG文件的工具
 
 """
 DAG生成器：连接Neo4j，分析表依赖关系，动态生成Airflow DAG

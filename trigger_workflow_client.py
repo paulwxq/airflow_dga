@@ -1,5 +1,5 @@
-# 此文件放在应用端，用于远程调用Airflow的API
-# 此方法用于手动触发指定表的工作流
+# 此文件放在应用端(客户端)，用于远程调用Airflow的API
+# 方法2：手动触发指定表的工作流
 
 
 import requests
@@ -81,12 +81,12 @@ class AirflowDagTriggerClient:
 # 使用示例
 def main():
     client = AirflowDagTriggerClient(
-        airflow_url='http://airflow-server:8080',
-        username='airflow',
-        password='airflow'
+        airflow_url='http://localhost:8080',
+        username='admin',
+        password='admin'
     )
     
-    result = client.trigger_workflow('month_sales_product_table')
+    result = client.trigger_workflow('region_month_sales_table')
     print(result)
 
 if __name__ == "__main__":

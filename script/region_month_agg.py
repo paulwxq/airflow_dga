@@ -3,6 +3,7 @@ from psycopg2 import sql
 import sys
 from airflow.utils.log.logging_mixin import LoggingMixin
 
+logger = LoggingMixin().log
 # 数据库连接配置
 DB_CONFIG = {
     'host': '192.168.3.156',
@@ -11,7 +12,7 @@ DB_CONFIG = {
     'password': 'postgres',
     'port': '5432'
 }
-logger = LoggingMixin().log
+
 
 def generate_region_monthly_sales():
     """

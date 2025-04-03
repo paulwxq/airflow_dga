@@ -1,5 +1,6 @@
 # 此文件放在Airflow服务器端DAG目录下，
 # 用于手动触发指定表的工作流
+# 方法2：手动触发指定表的工作流
 
 from airflow import DAG
 import os
@@ -13,7 +14,11 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # 服务器使用下面的配置
 # sys.path.append('/opt/airflow/neo4j_etl_scheduler')
 
+# 更改导入方式，直接从模块文件导入
 from workflow_orchestrator import WorkflowOrchestrator
+# 或者尝试以下导入方式之一
+# import workflow_orchestrator
+# from workflow_orchestrator import WorkflowOrchestrator
 from config import (
     DAG_OWNER, 
     DAG_EMAIL, 
@@ -54,7 +59,8 @@ with DAG(
     'dynamic_workflow_trigger',
     default_args=default_args,
     schedule_interval=None,  # 手动触发
-    catchup=False
+    catchup=False,
+    is_paused_upon_creation=False
 ) as dag:
     
     trigger_task = PythonOperator(
